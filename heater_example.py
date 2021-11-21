@@ -16,7 +16,7 @@ kD = 0.8
 def update_temperature(temperature, heater_power, delta_time):
     K = 0.3                             # thermal conductivity coefficient
     A = 1.0                             # area of conduction
-    t_diff = heater_power - temperature # temperature gradient
+    t_diff = (heater_power * 3) - temperature # temperature gradient
     rate = K * A * t_diff
     return temperature + rate * delta_time
 
